@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:milk_delivery_flutter_shipper_app/screens/favourite/favourite_screen.dart';
 import 'package:milk_delivery_flutter_shipper_app/screens/home/home_screen.dart';
 import 'package:milk_delivery_flutter_shipper_app/screens/notification/notification_screen.dart';
-import 'package:milk_delivery_flutter_shipper_app/screens/order/order_screen.dart';
+import 'package:milk_delivery_flutter_shipper_app/screens/delivery/delivery.dart';
 import 'package:milk_delivery_flutter_shipper_app/screens/profile/profile_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -18,8 +18,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   final _screens = const [
     HomeScreen(),
-    OrderScreen(),
-    FavouriteScreen(),
+    DeliveryScreen(),
     NotificationScreen(),
     ProfileScreen()
   ];
@@ -39,21 +38,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
             selectedColor: Colors.purple,
           ),
 
-          /// Order
+          /// Delivery
           SalomonBottomBarItem(
-            icon: const Icon(Icons.shopping_cart),
+            icon: const Icon(Icons.delivery_dining_rounded ),
             title: const Text("Order"),
             selectedColor: Colors.blue,
           ),
 
-          /// Likes
-          SalomonBottomBarItem(
-            icon: const Icon(Icons.favorite_border),
-            title: const Text("Likes"),
-            selectedColor: Colors.pink,
-          ),
-
-          /// Search
+          /// Notification
           SalomonBottomBarItem(
             icon: const Icon(Icons.notifications),
             title: const Text("Notifications"),
